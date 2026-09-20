@@ -773,6 +773,53 @@ text-decoration: underline;
 text-underline-offset: 2px;
 }
 .wskazowka a:hover, p a:hover { color: var(--granat); }
+
+@media (min-width: 1100px) {
+body {
+margin-left: 290px;
+margin-right: 2rem;
+}
+.spis {
+position: fixed;
+top: 1.5rem;
+left: 1.5rem;
+width: 230px;
+max-height: calc(100vh - 3rem);
+overflow-y: auto;
+margin: 0;
+padding: .9rem 1rem 1rem;
+font-size: .92rem;
+z-index: 10;
+}
+.spis h3 { font-size: .82rem; letter-spacing: .03em; text-transform: uppercase; }
+.spis ol { padding-left: 1.1rem; }
+.spis li { margin: .28rem 0; line-height: 1.35; }
+.spis ul a { font-size: .88rem; }
+}
+
+.do-gory {
+display: none;
+position: fixed;
+right: 1rem;
+bottom: 1rem;
+z-index: 20;
+background: var(--granat);
+color: #fff;
+text-decoration: none;
+font-size: .8rem;
+font-weight: 600;
+padding: .5rem .8rem;
+border-radius: 4px;
+box-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+@media (max-width: 1099px) {
+.do-gory { display: block; }
+}
+@media print {
+.spis { position: static; max-height: none; }
+.do-gory { display: none; }
+body { margin-left: auto; margin-right: auto; }
+}
 </style>
 </head>
 
@@ -790,7 +837,8 @@ Poznań, 23–24 września 2026 r.</p>
 <div class="naglowek">
 <p>Materiały warsztatowe dla uczestników Szkoły</p>
 </div>
-<section id="spis-treści" class="level3 spis">
+<div id="spis-tresci" class="spis">
+<section id="spis-treści" class="level3">
 <h3>Spis treści</h3>
 <ol type="1">
 <li><a href="#o-warsztatach">O warsztatach</a></li>
@@ -810,6 +858,7 @@ Poznań, 23–24 września 2026 r.</p>
 <li><a href="#organizacja">Organizacja</a></li>
 </ol>
 </section>
+</div>
 <section id="o-warsztatach" class="level1">
 <h1>O warsztatach</h1>
 <p>Celem warsztatów jest zaprezentowanie <strong>narzędzia do automatyzacji raportowania</strong> w programach ZMŚP: <strong>A1 – meteorologia</strong> oraz <strong>H1 – wody powierzchniowe (rzeki)</strong>. Pokażemy, jak narzędzie działa w praktyce – od pobrania danych z bazy po gotowy dokument Worda – i wspólnie przedyskutujemy proponowane zmiany w strukturze raportów.</p>
@@ -1157,6 +1206,7 @@ Ta sama prezentacja co w Części 2 — obejmuje również ryciny hydrologiczne 
 <div class="stopka">
 <p>Materiały zostały opracowane z wykorzystaniem Claude.</p>
 </div>
+<p><a href="#spis-tresci" class="do-gory">↑ Spis treści</a></p>
 </section>
 
 <script id="quarto-html-after-body" type="application/javascript">
