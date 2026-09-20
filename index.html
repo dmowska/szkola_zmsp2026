@@ -831,6 +831,24 @@ border-bottom: 1px solid transparent;
 margin-bottom: .5rem;
 }
 .spis-home:hover { border-bottom-color: var(--zielen); }
+
+#spis-materialy { margin-top: 1.1rem; }
+#spis-materialy ul {
+list-style: none;
+padding-left: .2rem;
+margin: .3rem 0 0;
+}
+#spis-materialy li { margin: .25rem 0; }
+#spis-materialy li::before { content: "↓ "; color: var(--zielen); }
+#spis-materialy a {
+color: var(--granat);
+font-size: .95rem;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+}
+#spis-materialy a:hover { border-bottom-color: var(--granat); }
+
+.materialy:target { box-shadow: 0 0 0 3px rgba(0, 96, 56, .35); }
 </style>
 </head>
 
@@ -869,6 +887,15 @@ Poznań, 23–24 września 2026 r.</p>
 </ul></li>
 <li><a href="#organizacja">Organizacja</a></li>
 </ol>
+</section>
+<section id="spis-materialy" class="level3">
+<h3>Materiały do pobrania</h3>
+<ul>
+<li><a href="#mat-instalacja">Instalacja oprogramowania</a></li>
+<li><a href="#mat-wprowadzenie">Wprowadzenie do pracy w R</a></li>
+<li><a href="#mat-a1">Program A1</a></li>
+<li><a href="#mat-h1">Program H1</a></li>
+</ul>
 </section>
 </div>
 <section id="o-warsztatach" class="level1">
@@ -968,7 +995,8 @@ Poznań, 23–24 września 2026 r.</p>
 <p><strong>Jeśli dokument się otworzył – komputer jest gotowy.</strong></p>
 </section>
 <p><strong>Każdy z tych kroków jest opisany szczegółowo w pełnej Instrukcji instalacji</strong> – razem z wyjaśnieniem, co się dzieje na ekranie, opisem najczęstszych problemów i komunikatów błędów. Wszystko robisz <strong>jeden raz</strong>; przy kolejnych raportach instrukcja nie jest już potrzebna.</p>
-<section id="materiały-do-pobrania" class="level3 materialy">
+<div id="mat-instalacja" class="materialy">
+<section id="materiały-do-pobrania" class="level3">
 <h3>Materiały do pobrania</h3>
 <dl>
 <dt><a href="materialy/INSTRUKCJA_INSTALACJI.zip" class="plik"><code>INSTRUKCJA_INSTALACJI.zip</code></a></dt>
@@ -985,6 +1013,7 @@ Ta sama procedura na dwóch stronach – cztery kroki instalacji bez opisu przyp
 </dd>
 </dl>
 </section>
+</div>
 </section>
 <section id="wprowadzenie-r" class="level2">
 <h2>Wprowadzenie do pracy w R</h2>
@@ -1011,7 +1040,8 @@ Ta sama procedura na dwóch stronach – cztery kroki instalacji bez opisu przyp
 <p><strong>Plik <code>.R</code></strong> to klasyczny skrypt R – zawiera wyłącznie kod, a wszystko poza nim musi być poprzedzone znakiem komentarza <code>#</code>. Uruchamia się go przyciskiem <strong>Source</strong> i jego efektem są obliczenia oraz zapisane pliki, a nie dokument.</p>
 <p><strong>Plik <code>.qmd</code></strong> to dokument Quarto – łączy <strong>tekst</strong> i <strong>bloki kodu R</strong> w jednym pliku. Uruchamia się go przyciskiem <strong>Render</strong>: Quarto wykonuje kod, zbiera wyniki (liczby, tabele, wykresy) i wstawia je w odpowiednie miejsca tekstu, tworząc gotowy dokument Worda, PDF lub stronę HTML. Z tego właśnie formatu powstają raporty A1 i H1.</p>
 </section>
-<section id="materiały-do-pobrania-1" class="level3 materialy">
+<div id="mat-wprowadzenie" class="materialy">
+<section id="materiały-do-pobrania-1" class="level3">
 <h3>Materiały do pobrania</h3>
 <dl>
 <dt><a href="materialy/WPROWADZENIE.zip" class="plik"><code>WPROWADZENIE.zip</code></a></dt>
@@ -1020,6 +1050,7 @@ Folder warsztatowy zawierający cztery pliki: <code>1_wprowadzenie.Rproj</code> 
 </dd>
 </dl>
 </section>
+</div>
 <hr>
 </section>
 </section>
@@ -1086,7 +1117,8 @@ Folder warsztatowy zawierający cztery pliki: <code>1_wprowadzenie.Rproj</code> 
 <div class="uwaga">
 <p>Folder <code>wyniki</code> jest <strong>kasowany i tworzony od nowa przy każdym uruchomieniu</strong>. Jeśli chcesz zachować raport poprzedniej stacji lub poprzedniego roku, skopiuj folder w inne miejsce. Zamknij też dokumenty otwarte w Wordzie – otwartego pliku nie da się nadpisać.</p>
 </div>
-<section id="materiały-do-pobrania-2" class="level3 materialy">
+<div id="mat-a1" class="materialy">
+<section id="materiały-do-pobrania-2" class="level3">
 <h3>Materiały do pobrania</h3>
 <dl>
 <dt><a href="materialy/A1.zip" class="plik"><code>A1.zip</code></a></dt>
@@ -1103,6 +1135,7 @@ Prezentacja zbierająca <strong>wszystkie typy wykresów użyte w programach A1,
 </dd>
 </dl>
 </section>
+</div>
 <hr>
 </section>
 </section>
@@ -1154,7 +1187,8 @@ Prezentacja zbierająca <strong>wszystkie typy wykresów użyte w programach A1,
 <div class="uwaga">
 <p><strong>Część hydrochemiczna raportu H1</strong> omawiana jest na zajęciach. Docelowo będzie generowana razem z H1 — jednym uruchomieniem — ale jest jeszcze w opracowaniu, dlatego w trakcie warsztatów zostaną udostępnione gotowe wygenerowane raporty.</p>
 </div>
-<section id="materiały-do-pobrania-3" class="level3 materialy">
+<div id="mat-h1" class="materialy">
+<section id="materiały-do-pobrania-3" class="level3">
 <h3>Materiały do pobrania</h3>
 <dl>
 <dt><a href="materialy/H1.zip" class="plik"><code>H1.zip</code></a></dt>
@@ -1175,6 +1209,7 @@ Ta sama prezentacja co w Części 2 — obejmuje również ryciny hydrologiczne 
 </dd>
 </dl>
 </section>
+</div>
 <hr>
 </section>
 </section>
